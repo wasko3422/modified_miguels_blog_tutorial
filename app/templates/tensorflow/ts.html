@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+    #container{
+        width: 300 px;
+        margin: auto;
+    }
+
+
+    #sketch {
+        border: 5px solid purple;
+        height: 300px;
+        width: 300px;
+        position: relative;
+        float:left
+    }
+
+    #answers{
+        float: left;
+        width: 300px;
+        display: inline-block;
+        padding: 30px;
+    }
+
+
+    #kek{
+    padding: 30px;
+    clear: both;
+    }
+
+</style>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/2.3.3/fabric.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+</head>
+
+<body>
+<div id="container">
+
+    <div id="sketch">
+        <canvas id="c" width="300" height="300"></canvas>
+    </div>
+
+    <div id="answers">
+        <b>Hello</b>
+    </div>
+
+</div>
+<div id="kek"><input id="b" type="button" value="On right"></div>
+<div id="guess"><input id="denis" type="button" value="Guess"></div>
+<script>
+    var canvas = new fabric.Canvas('c');
+    canvas.isDrawingMode = true;
+    canvas.freeDrawingBrush.color = "black";
+    canvas.freeDrawingBrush.width = 10;
+
+    $("#b").click(function(){
+    canvas.clear();
+    });
+    $("#denis").click(function(){
+            var img = canvas.toDataURL();
+            $.post('/upload',{
+            image: img
+            });
+        })
+
+
+
+</script>
+
+
+</body>
+</html>

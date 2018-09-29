@@ -1,0 +1,146 @@
+2018-07-11 20:44:41,404 INFO: Microblog startup [in D:\python_projects\flask\app\__init__.py:73]
+2018-07-11 20:44:55,164 ERROR: Exception on /upload [POST] [in d:\python_projects\flask\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\panow\Anaconda3\lib\base64.py", line 517, in _input_type_check
+    m = memoryview(s)
+TypeError: memoryview: a bytes-like object is required, not 'str'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\python_projects\flask\app\main\routes.py", line 144, in upload
+    f.write(base64.decodebytes(request.form['image']))
+  File "C:\Users\panow\Anaconda3\lib\base64.py", line 552, in decodebytes
+    _input_type_check(s)
+  File "C:\Users\panow\Anaconda3\lib\base64.py", line 520, in _input_type_check
+    raise TypeError(msg) from err
+TypeError: expected bytes-like object, not str
+2018-07-11 20:50:14,598 INFO: Microblog startup [in D:\python_projects\flask\app\__init__.py:73]
+2018-07-11 20:50:17,073 ERROR: Exception on /upload [POST] [in d:\python_projects\flask\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\python_projects\flask\app\main\routes.py", line 145, in upload
+    f.write(base64.decodebytes(request.form['image'].decode()))
+AttributeError: 'str' object has no attribute 'decode'
+2018-07-11 20:53:27,483 INFO: Microblog startup [in D:\python_projects\flask\app\__init__.py:73]
+2018-07-11 20:53:36,746 ERROR: Exception on /upload [POST] [in d:\python_projects\flask\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\python_projects\flask\app\main\routes.py", line 145, in upload
+    f.write(base64.decodebytes(request.form['image'].decode()))
+AttributeError: 'str' object has no attribute 'decode'
+2018-07-11 20:53:55,797 INFO: Microblog startup [in D:\python_projects\flask\app\__init__.py:73]
+2018-07-11 20:53:58,511 ERROR: Exception on /upload [POST] [in d:\python_projects\flask\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\python_projects\flask\app\main\routes.py", line 145, in upload
+    f.write(base64.decodebytes(photo))
+  File "C:\Users\panow\Anaconda3\lib\base64.py", line 553, in decodebytes
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+2018-07-11 20:56:05,384 INFO: Microblog startup [in D:\python_projects\flask\app\__init__.py:73]
+2018-07-11 20:56:09,273 ERROR: Exception on /upload [POST] [in d:\python_projects\flask\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\python_projects\flask\app\main\routes.py", line 144, in upload
+    f.write(base64.b64decode(request.form['image']))
+  File "C:\Users\panow\Anaconda3\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+2018-07-11 20:56:30,516 INFO: Microblog startup [in D:\python_projects\flask\app\__init__.py:73]
+2018-07-11 20:56:32,172 ERROR: Exception on /upload [POST] [in d:\python_projects\flask\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\python_projects\flask\app\main\routes.py", line 145, in upload
+    f.write(base64.b64decode(request.form['image']))
+  File "C:\Users\panow\Anaconda3\lib\base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Incorrect padding
+2018-07-11 21:00:01,411 INFO: Microblog startup [in D:\python_projects\flask\app\__init__.py:73]
+2018-07-11 21:00:03,699 ERROR: Exception on /upload [POST] [in d:\python_projects\flask\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\python_projects\flask\app\main\routes.py", line 143, in upload
+    print(request.form['image'].split()[1])
+IndexError: list index out of range
+2018-07-13 23:10:08,678 INFO: Microblog startup [in D:\python_projects\flask\app\__init__.py:76]
+2018-07-13 23:11:12,062 INFO: Microblog startup [in D:\python_projects\flask\app\__init__.py:76]
+2018-07-13 23:11:50,265 INFO: Microblog startup [in D:\python_projects\flask\app\__init__.py:76]

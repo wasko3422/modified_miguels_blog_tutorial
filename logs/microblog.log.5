@@ -1,0 +1,18 @@
+2018-07-11 20:16:23,358 ERROR: Exception on /upload [POST] [in d:\python_projects\flask\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "d:\python_projects\flask\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "D:\python_projects\flask\app\main\routes.py", line 146, in upload
+    file.save(f)
+AttributeError: 'str' object has no attribute 'save'
+2018-07-11 20:24:38,138 INFO: Microblog startup [in D:\python_projects\flask\app\__init__.py:73]

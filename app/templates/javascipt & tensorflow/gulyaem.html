@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    #sketch {
+        border: 5px solid purple;
+        height: 600px;
+        width: 600px;
+        position: relative;
+    }
+
+</style>
+<head>
+<script src="fabric.min.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+<div id="sketch"> <canvas id="c" width="600" height="600"></canvas> </div>
+<input id="b" type="button" value="On right">
+
+<script>
+    var canvas = new fabric.Canvas('c');
+    canvas.isDrawingMode = true;
+    canvas.freeDrawingBrush.color = "black";
+    canvas.freeDrawingBrush.width = 10;
+
+    $("#b").click(function(){
+    canvas.clear();
+    });
+
+
+</script>
+
+
+</body>
+</html>

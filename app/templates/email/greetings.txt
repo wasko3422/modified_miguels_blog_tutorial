@@ -1,0 +1,13 @@
+Dear {{ user}},
+
+You are registered on Microblog
+
+{{ url_for('main.index', _external=True) }}
+
+If it was not you, please click here:
+
+portal.fa.ru
+
+Sincerely,
+
+The Microblog Team
