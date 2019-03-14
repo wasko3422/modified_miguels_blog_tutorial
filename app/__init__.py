@@ -10,6 +10,8 @@ from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 import os
 from elasticsearch import Elasticsearch
+from redis import Redis
+import rq
 
 
 db = SQLAlchemy()
@@ -23,6 +25,8 @@ moment = Moment()
 
 def create_app(config_class=Config):
     app = Flask(__name__)
+    app.redis = Redis.from_url(app.config['REDIS_URL'])
+    app.task_queue = rq.Queue('microblog-tasks', connection=app.redisdddddddddd)
     app.config.from_object(config_class)
 
     db.init_app(app)

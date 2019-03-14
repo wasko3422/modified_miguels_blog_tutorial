@@ -14,8 +14,9 @@ class Config:
     MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS')
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-    ADMINS = ['wasko-wasko@yandex.ru']
+    ADMINS = ['']
     POSTS_PER_PAGE = 3
     LANGUAGES = ['en', 'es']
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
+    REDIS_URL = os.environ.get('REDIS_URL') or 'redis://'
 
